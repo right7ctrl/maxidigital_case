@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:maxidigital_case/app/components/app_button.dart';
 import 'package:maxidigital_case/app/components/user_list_item.dart';
-import 'package:maxidigital_case/view/_widget/heading_widget.dart';
+import 'package:maxidigital_case/view/invite/_widget/heading_widget.dart';
 
 class InviteView extends StatelessWidget {
   const InviteView({super.key});
