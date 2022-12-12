@@ -8,9 +8,18 @@ class UserItemModel {
   final int? totalEarned, date;
   final bool? isEarned;
 
-  String get dateString{
-    if(date == null) return "";
+  String get dateString {
+    if (date == null) return "";
     return DateTime.fromMillisecondsSinceEpoch(date!).toIso8601String();
+  }
+
+  String get fullName {
+    return '${firstName ?? ''} ${lastName ?? ''}';
+  }
+
+  String get earningTotal {
+    if (!(isEarned ?? false)) return '0 €';
+    return '+${totalEarned ?? 0} €';
   }
 
   UserItemModel(this.firstName, this.lastName, this.totalEarned, this.date, this.isEarned);
