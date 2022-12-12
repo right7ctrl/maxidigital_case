@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maxidigital_case/app/style_constants.dart';
 
 class AppButton extends StatelessWidget {
   final String buttonText;
@@ -24,7 +25,7 @@ class AppButton extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Color.fromRGBO(255, 112, 47, 1), Color.fromRGBO(254, 59, 90, 1)],
+          colors: [buttonGradientStartColor, buttonGradientEndColor],
           stops: [0, 1],
         ),
       );
