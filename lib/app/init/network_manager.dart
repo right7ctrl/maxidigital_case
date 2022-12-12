@@ -14,26 +14,10 @@ class NetworkManager {
         sendTimeout: 40000, //40s
         receiveTimeout: 40000, //40s
         contentType: 'application/json',
-        baseUrl: 'https://api.yazilimgo.com/step/api/v1',
+        baseUrl: 'https://b5jabr5esqfql36a4vdwqi5u740tnjei.lambda-url.eu-central-1.on.aws',
       );
 
   NetworkManager._init() {
     dio = Dio(options);
-    dio.interceptors.add(AppInterceptor());
   }
-}
-
-class AppInterceptor extends InterceptorsWrapper {
-  @override
-  void onError(DioError err, ErrorInterceptorHandler handler) {
-    debugPrint('${err.stackTrace}');
-    return handler.next(BaseError(requestOptions: err.requestOptions, message: err.toString()));
-  }
-}
-
-class BaseError extends DioError {
-  @override
-  final String message;
-
-  BaseError({required super.requestOptions, this.message = 'Error'});
 }
