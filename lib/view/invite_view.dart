@@ -9,7 +9,7 @@ class InviteView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    final double headingHeight = size.height * .4;
+    final double headingHeight = size.height * .35;
     const double bodyPadding = 20;
 
     return Scaffold(
