@@ -53,7 +53,10 @@ class HeadingWidget extends StatelessWidget {
                                 children: const [
                                   Icon(Icons.money, size: 16),
                                   SizedBox(width: 8),
-                                  Text("You can claim!"),
+                                  Text(
+                                    "You can claim!",
+                                    style: TextStyle(decoration: TextDecoration.underline, fontWeight: FontWeight.bold),
+                                  ),
                                 ],
                               ),
                             ],

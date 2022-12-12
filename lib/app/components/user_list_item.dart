@@ -9,8 +9,8 @@ class UserListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      elevation: 12,
-      shadowColor: Colors.grey.shade300,
+      elevation: 16,
+      shadowColor: Colors.grey.shade100,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         child: Row(
