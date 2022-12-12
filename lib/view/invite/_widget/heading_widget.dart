@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:maxidigital_case/app/style_constants.dart';
+import 'package:maxidigital_case/view/invite/invite_viewmodel.dart';
+
+import '../../../locator.dart';
 
 class HeadingWidget extends StatelessWidget {
   final double headingHeight;
@@ -10,6 +13,8 @@ class HeadingWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final vm = locator<InviteViewModel>();
+
     return Container(
       padding: const EdgeInsets.only(top: kToolbarHeight, left: 24, right: 24),
       decoration: const BoxDecoration(
@@ -43,7 +48,7 @@ class HeadingWidget extends StatelessWidget {
                           children: [
                             const Text("Total Earned", style: TextStyle(color: Colors.white70, fontSize: 12)),
                             const SizedBox(height: 8),
-                            const Text("330 €", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 32)),
+                            Text("${vm.totalEarned} €", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 32)),
                             const SizedBox(height: 12),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -64,12 +69,12 @@ class HeadingWidget extends StatelessWidget {
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
-                          children: const [
-                            Text("Total Earned", style: TextStyle(color: Colors.white70, fontSize: 12)),
-                            SizedBox(height: 8),
-                            Text("330 €", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 32)),
-                            SizedBox(height: 12),
-                            Text("Maximum earnings 600 €"),
+                          children:  [
+                            const Text("Potential Earned", style: TextStyle(color: Colors.white70, fontSize: 12)),
+                            const SizedBox(height: 8),
+                            Text("${vm.potentialEarned} €", style:const TextStyle(fontWeight: FontWeight.bold, fontSize: 32)),
+                            const SizedBox(height: 12),
+                            Text("Maximum earnings ${vm.maximumEarning} €"),
                           ],
                         ),
                       ),

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:maxidigital_case/app/app_constants.dart';
+import 'package:maxidigital_case/locator.dart';
 import 'package:maxidigital_case/view/invite/invite_view.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  setupLocator();
   runApp(const App());
 }
 
