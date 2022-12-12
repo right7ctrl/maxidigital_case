@@ -11,9 +11,17 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: appName,
       home: InviteView(),
+      theme: ThemeData(
+        primaryColor:const Color.fromRGBO(28, 0, 106, 1),
+        iconTheme: Theme.of(context).iconTheme.copyWith(color: Colors.white),
+        textTheme: Theme.of(context).textTheme.apply(
+              bodyColor: Colors.white,
+              displayColor: Colors.white,
+            ),
+      ),
     );
   }
 }

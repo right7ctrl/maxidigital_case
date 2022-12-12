@@ -10,13 +10,13 @@ class AppButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 54.0,
+      height: 64.0,
       width: double.infinity,
       decoration: buttonDecoration,
       child: ElevatedButton(
         onPressed: onTap,
         style: ElevatedButton.styleFrom(backgroundColor: Colors.transparent, shadowColor: Colors.transparent),
-        child: Text(buttonText, style: const TextStyle(color: Colors.white)),
+        child: Text(buttonText, style: const TextStyle(color: Colors.white, fontSize: 18)),
       ),
     );
   }
@@ -26,7 +26,6 @@ class AppButton extends StatelessWidget {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [buttonGradientStartColor, buttonGradientEndColor],
-          stops: [0, 1],
         ),
       );
 }

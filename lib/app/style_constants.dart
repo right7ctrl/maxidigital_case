@@ -6,4 +6,4 @@ const Color headingGradientEndColor = Color.fromRGBO(28, 0, 106, 1);
 
 //App Button
 const Color buttonGradientStartColor = Color.fromRGBO(255, 112, 47, 1);
-const Color buttonGradientEndColor = Color.fromRGBO(255, 112, 47, 1);
+const Color buttonGradientEndColor = Color.fromRGBO(255,54,92, 1);
