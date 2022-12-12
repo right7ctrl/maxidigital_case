@@ -27,6 +27,13 @@ class AppInterceptor extends InterceptorsWrapper {
   @override
   void onError(DioError err, ErrorInterceptorHandler handler) {
     debugPrint('${err.stackTrace}');
-    handler.next(err);
+    return handler.next(BaseError(requestOptions: err.requestOptions, message: err.toString()));
   }
+}
+
+class BaseError extends DioError {
+  @override
+  final String message;
+
+  BaseError({required super.requestOptions, this.message = 'Error'});
 }
